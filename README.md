@@ -1,28 +1,39 @@
-# Monte Carlo Dice Simulation Analysis
+# Python Algorithms Collection
 
-## Overview
-This document presents the findings from a Monte Carlo simulation of rolling two dice. The simulation was run 50,000 times to estimate the probabilities of rolling sums between 2 and 12.
+A collection of Python algorithm implementations covering linked lists, recursion, graph search, binary trees, and probability simulation.
 
-## Methodology
-Two virtual dice were rolled 50,000 times. The sum of the numbers on both dice was recorded for each roll, and the frequency of each sum was used to calculate the probability of its occurrence.
+## Features
 
-## Simulated Probabilities vs Mathematical Probabilities
-The simulation results were then compared to the mathematical probabilities of rolling each sum, which are based on combinatorial analysis.
+- **task_01.py** — singly linked list: reverse, insertion sort, and merge of two sorted lists
+- **task_02.py** — Pythagoras tree fractal drawn recursively with `turtle`
+- **task_03.py** — Dijkstra's shortest path algorithm on a weighted graph, with visualization (`graph.py`, `dijkstra.py`)
+- **task_04.py** — binary heap converted to a tree and visualized with `networkx`
+- **task_05.py** — DFS and BFS traversal of a binary heap tree, visualized with a color gradient by visit order
+- **task_06.py** — budget-constrained item selection via a greedy algorithm and dynamic programming, optimizing calories per cost
+- **task_07.py** — Monte Carlo simulation of two-dice rolls, comparing simulated vs. theoretical probabilities (see `monte-carlo.png`)
 
-## Findings
+## Technology
 
-### Similarity of Results
-The simulated probabilities closely align with the mathematical probabilities. This is expected because the Monte Carlo method is known to be an effective numerical tool for approximating probabilities through large numbers of random experiments.
+- Python 3
+- networkx, matplotlib (graph/tree visualization)
+- turtle (fractal drawing)
 
-### Sample Size and Convergence
-The large sample size of 50,000 rolls helped to minimize the impact of random variance and allowed the simulated probabilities to converge closely to the mathematical expectations.
+## Running
 
-### Trend of Probabilities
-Both the simulated and mathematical results show that the probability of rolling sums increases up to 7 and then decreases, which is consistent with the binomial distribution expected from rolling two dice.
+Each task is a standalone script:
 
-## Conclusion
-The Monte Carlo simulation has effectively approximated the mathematical probabilities of rolling each possible sum with two dice. The experiment validates the reliability of Monte Carlo methods in statistical experiments and probability estimations.
+```
+python task_01.py
+python task_02.py
+python task_03.py
+python task_04.py
+python task_05.py
+python task_06.py
+python task_07.py
+```
 
-## Simulation Result Image
-![Monte Carlo Simulation Results](monte-carlo.png)
+Install dependencies first:
 
+```
+pip install networkx matplotlib
+```
